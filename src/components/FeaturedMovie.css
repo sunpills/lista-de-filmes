@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
-
 .featured {
-    height: 70vh;
+    height: 80vh;
 }
+
 .featured--vertical {
     width: inherit;
     height: inherit;
     background: #2D0C5E;
 }
+
 .featured--horizontal {
     display: flex;
     flex-direction: column;
@@ -15,8 +16,8 @@
 }
 
 .featured--info {
+    position: relative;
     display: flex;
-    justify-content: center;
     font-size: 48px;
     font-family: 'Roboto', sans-serif;
     font-style: bold;
@@ -25,8 +26,6 @@
 
 .featured--info h2 {
     display: flex;
-    margin-left: 400px;
-    margin-right: 400px;
 }
 
 .header-subtitle {
@@ -48,8 +47,9 @@
 }
 
 .featured--watchbutton {
+    position: relative;
     display: inline-block;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     padding: 15px 25px;
     border-radius: 5px;
@@ -71,22 +71,16 @@
 
 @media (max-width: 760px) {
     .featured {
-        height: 95vh;
+        height: 100vh;
     }
-    .featured--name {
-        font-size: 30px;
+    .featured--info h2 {
+        font-size: 20px;
     }
-    .featured--info {
-        font-size: 16px;
-    }
-    .featured--description {
+    .featured--watchbutton {
+        display: inline-block;
+        width: 80px;
         font-size: 14px;
-        max-width: 100%;
-        margin-right: 30px;
-    }
-    .featured--watchbutton,
-    .featured--mylistbutton {
-        font-size: 16px;
+        margin-top: 10px;
     }
     .featured--genres {
         font-size: 14px;
