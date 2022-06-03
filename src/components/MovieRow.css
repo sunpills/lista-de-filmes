@@ -1,0 +1,31 @@
+.movieRow {
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 190px;
+}
+.movieRow--listarea {
+    display: flex;
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+.movieRow--item {
+    display: flex;
+    width: 300px;
+    cursor: pointer;
+}
+.movieRow--item img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.movieRow--item img:hover {
+    transform: scale(1);
+}
+
+@media (max-width: 760px) {
+    .movieRow--item {
+        width: 250px;
+        opacity: 1;
+    }
+}
