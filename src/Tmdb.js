@@ -13,7 +13,7 @@ export default {
             {
                 slug: 'originals',
                 title: '',
-                items: await basicFetch(`/movie/popular?&language=pt-BR&api_key=${API_KEY}`)
+                items: await basicFetch(`/trending/movie/week?&language=pt-BR&api_key=${API_KEY}`)
             },
         ];
     },

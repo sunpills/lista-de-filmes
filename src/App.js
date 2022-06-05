@@ -5,12 +5,13 @@ import './App.css';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
 
+
 export default () => {
 
     const [movieList, setMovieList] = useState([]);
     const [featuredData, setFeaturedData] = useState(null);
     useEffect(() => {
-        const loadAll = async() => {
+        const loadAll = async () => {
             // pegando a lista total
             let list = await Tmdb.getHomeList();
             console.log(list);
@@ -28,24 +29,11 @@ export default () => {
 
         loadAll();
     }, []);
-
-    return ( <
-            div className = 'page' >
-            <
-            Header black = { blackHeader }
-            /> {
-                featuredData &&
-                    <
-                    FeaturedMovie item = { featuredData }
-                />} <
-                section className = 'lists' > {
-                        movieList.map((item, key) => ( < MovieRow key = { key }
-                                title = { item.title }
-                                items = { item.items }
-                                />))} <
-                                /section>
-
-                                <
-                                /div>
-                            )
-                        }
+    return (<div className='page'>
+        <Header />
+         {featuredData && <FeaturedMovie item={featuredData} />}
+         <section className='lists'>{movieList.map((item, key) => (< MovieRow key={key} title={item.title} items={item.items} />))}
+             </section>
+    </div>
+    )
+}

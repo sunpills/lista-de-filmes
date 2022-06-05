@@ -1,26 +1,43 @@
 .movieRow {
     display: flex;
+    width: 100%;
     margin-bottom: 30px;
     margin-top: 190px;
 }
+
 .movieRow--listarea {
-    display: flex;
-    overflow-x: hidden;
-    padding-left: 30px;
-}
-.movieRow--item {
-    display: flex;
-    width: 300px;
-    cursor: pointer;
-}
-.movieRow--item img {
     width: 100%;
-    transform: scale(0.9);
-    transition: all ease 0.2s;
+    display: flex;
+    background-color: #E7E7E7;
 }
 
-.movieRow--item img:hover {
-    transform: scale(1);
+.movieRow--item {
+    position: relative;
+    display: flex;
+    float: left;
+    list-style: none;
+    margin-left: 5px;
+}
+.movieRow--item img {
+    width: 150px;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.movieRow--item h3 {
+    display: flex;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.movieRow--item p {
+    text-align: inherit;
+    color: #646464;
+    font-size: 13px;
+    font-style: bold;
 }
 
 @media (max-width: 760px) {
